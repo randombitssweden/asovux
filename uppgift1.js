@@ -10,14 +10,23 @@ var firstName = [];
 var spaceCharCheck = inputName.indexOf(" ");
 var spaceCharCheckEnd = inputName.lastIndexOf(" ");
 if ( spaceCharCheck != spaceCharCheckEnd ) {
+    for (i = 0; i < spaceCharCheck +1 ; i++) {
+        // Only using first name, no matter how many where entered.
+        firstName[i] = inputName[i];
+    }
     // Confirm non standard name
+    var confirmNameOK = confirm("Är det ok om jag kallar dig " +firstName +"?");
+    if (! confirmNameOK) {
+            alert("Då kallar jag dig förvirrad. FÖr det är jag.")
+            firstName = "Förvirrad"
+    }
 } else {
-    // Check and confirm first name
+    // Checks and confirm first name
     if ( spaceCharCheck == -1 ) {
         firstName = inputName;
     } else {
-        // Not working with space in name. "TypeError cannot set property of '0' undefined." Fixed now?
         for (i = 0; i < spaceCharCheck +1 ; i++) {
+            // Only using first name, no matter how many where entered.
             firstName[i] = inputName[i];
         }
     }
