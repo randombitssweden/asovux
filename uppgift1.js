@@ -5,6 +5,8 @@ var buffer1 = 0;
 var buffer2 = 1;
 //var username = "Peter";
 var inputName = prompt("Vad heter du?:");
+// Namn börjar på stor bokstav oavsett om barn skriver det eller inte.
+inputName[0] = inputName[0].toUpperCase ; 
 var firstName = [];
 // Vi kollar om vi fått förväntad input. [förnamn] eller [förnamn efternamn]
 var spaceCharCheck = inputName.indexOf(" ");
