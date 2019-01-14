@@ -3,12 +3,14 @@ function genMathNum() {
 }
 var buffer1 = 0;
 var buffer2 = 1;
-//var username = "Peter";
-var inputName = prompt("Vad heter du?:");
+var username = "peter";
+//var inputName = prompt("Vad heter du?:");
 // Namn börjar på stor bokstav oavsett om barn skriver det eller inte.
+console.log("Changing first letter in name to capital.")
 inputName[0] = inputName[0].toUpperCase ; 
 var firstName = [];
 // Vi kollar om vi fått förväntad input. [förnamn] eller [förnamn efternamn]
+console.log("Checking for names...")
 var spaceCharCheck = inputName.indexOf(" ");
 var spaceCharCheckEnd = inputName.lastIndexOf(" ");
 if ( spaceCharCheck != spaceCharCheckEnd ) {
@@ -18,9 +20,11 @@ if ( spaceCharCheck != spaceCharCheckEnd ) {
     }
     // Confirm non standard name
     var confirmNameOK = confirm("Är det ok om jag kallar dig " +firstName +"?");
-    if (! confirmNameOK) {
-            alert("Då kallar jag dig förvirrad. FÖr det är jag.")
-            firstName = "Förvirrad"
+    if (confirmNameOK) {
+        alert("Då kallar jag dig förvirrad. FÖr det är jag.")
+        firstName = "Förvirrad"
+    } else {
+
     }
 } else {
     // Checks and confirm first name
@@ -33,6 +37,7 @@ if ( spaceCharCheck != spaceCharCheckEnd ) {
         }
     }
 }
+console.log("Using " +firstName +" as name for user.")
 var tal1 = [];
 var tal2 = [];
 var svar = [];
@@ -63,8 +68,11 @@ for ( i = 0 ; i < 5 ; i++ ) {
         document.body.innerHTML+=" <font color=\"green\">Rätt!</fontcolor><br>"
         counter++;
     } else {
-        document.body.innerHTML+="Fel. Det rätta svaret är: <i>" +tal1[i]-tal2[i];
+        document.body.innerHTML+="Fel. Det rätta svaret är: <i>" +tal1[i]-tal2[i] +"</i><br>";
     }
 }
-
-document.body.innerHTML+=firstName;
+if (counter == 4) {
+    document.body.innerHTML("<br>Grattis! Du fick alla rätt!<br>");
+} else {
+    document.body.innerHTML+="<br>Du fick " +counter +" rätt!";
+}
