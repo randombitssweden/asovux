@@ -21,7 +21,7 @@ if ( spaceCharCheck != spaceCharCheckEnd ) {
     // Confirm non standard name
     var confirmNameOK = confirm("Är det ok om jag kallar dig " +firstName +"?");
     if (confirmNameOK) {
-        alert("Då kallar jag dig förvirrad. FÖr det är jag.")
+        alert("Då kallar jag dig förvirrad. För det är jag.")
         firstName = "Förvirrad"
     } else {
 
