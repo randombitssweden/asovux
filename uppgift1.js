@@ -3,9 +3,18 @@ function genMathNum() {
 }
 var buffer1 = 0;
 var buffer2 = 1;
-var username = "peter";
-//var inputName = prompt("Vad heter du?:");
+//var inputName = "peter";
+//while (isNaN(inputName) == false) {
+var inputName = prompt("Vad heter du?:");
 // Namn börjar på stor bokstav oavsett om barn skriver det eller inte.
+//}
+if (isNaN(inputName) == false ) {
+    var inputName = prompt("Ditt namn innehåller siffror\nVad heter du?:");
+
+}
+if (isNaN(inputName) == false ) {
+    alert("Då kallar jag dig för " +inputName);
+}
 console.log("Changing first letter in name to capital.")
 inputName[0] = inputName[0].toUpperCase ; 
 var firstName = [];
@@ -16,11 +25,12 @@ var spaceCharCheckEnd = inputName.lastIndexOf(" ");
 if ( spaceCharCheck != spaceCharCheckEnd ) {
     for (i = 0; i < spaceCharCheck +1 ; i++) {
         // Only using first name, no matter how many where entered.
-        firstName[i] = inputName[i];
+        firstName += inputName[i];
     }
     // Confirm non standard name
     var confirmNameOK = confirm("Är det ok om jag kallar dig " +firstName +"?");
-    if (confirmNameOK) {
+    console.log(confirmNameOK);
+    if (confirmNameOK = 0) {
         alert("Då kallar jag dig förvirrad. För det är jag.")
         firstName = "Förvirrad"
     } else {
@@ -33,7 +43,7 @@ if ( spaceCharCheck != spaceCharCheckEnd ) {
     } else {
         for (i = 0; i < spaceCharCheck +1 ; i++) {
             // Only using first name, no matter how many where entered.
-            firstName[i] = inputName[i];
+            firstName += (inputName[i]);
         }
     }
 }
@@ -55,24 +65,30 @@ for (i = 0; i < 5; i++) {
     buffer1 = 0;
     buffer2 = 1;
     svar[i] = prompt("Vad blir " +tal1[i] +"-" +tal2[i] +"?:" );
-
+    if (svar[i] == "") {
+        svar[i] == "Inget svar."
+    }
     // Buggy results.
-    if ( ! isNaN(svar[i]) ) {
+    console.log("NaN - Svar " +i +" is " +isNaN(svar[i]));
+    while (isNaN(svar[i]) == true) {
+        console.log("NaN entered.")
         svar[i] = prompt("Du måste ange en siffra mellan 0-9.\nVad blir " +tal1[i] +"-" +tal2[i] +"?:");
     }
 }
-document.body.innerHTML+="Dina resultat:<br>";
+document.body.innerHTML+="Hej " +firstName;
+document.body.innerHTML+="<br>Dina resultat:<br>";
 for ( i = 0 ; i < 5 ; i++ ) {
     document.body.innerHTML+=i+1 +". " +tal1[i] +" - " +tal2[i] +" = " +svar[i];
     if ( tal1[i]-tal2[i] == svar[i] ) {
         document.body.innerHTML+=" <font color=\"green\">Rätt!</fontcolor><br>"
         counter++;
     } else {
-        document.body.innerHTML+="Fel. Det rätta svaret är: <i>" +tal1[i]-tal2[i] +"</i><br>";
+        document.body.innerHTML+=" <font color=\"red\">Fel.</font> Det rätta svaret är: <i>";
+        document.body.innerHTML+=tal1[i]-tal2[i] +"</i><br>";
     }
 }
-if (counter == 4) {
-    document.body.innerHTML("<br>Grattis! Du fick alla rätt!<br>");
+if (counter == 5) {
+    document.body.innerHTML+=("<br>Grattis! Du fick alla rätt!<br>");
 } else {
     document.body.innerHTML+="<br>Du fick " +counter +" rätt!";
 }
