@@ -4,13 +4,24 @@ var talk = document.getElementById("green");
 var apa = document.getElementById("apa");
 see.addEventListener("mouseover", function() {
     see.style.cursor="pointer";
+    hear.style.color="pink";
+    talk.style.color="green";
+    see.style.color="black";
+    apa.style.color="purple"
 });
 hear.addEventListener("mouseover", function() {
     hear.style.cursor="pointer";
     apa.style.color="green";
+    see.style.color="yellow";
+    hear.style.color="black";
+    talk.style.color="green"
 });
 talk.addEventListener("mouseover", function() {
     talk.style.cursor="pointer";
+    talk.style.color="black";
+    see.style.color="yellow";
+    hear.style.color="pink";
+    apa.style.color="grey";
 
 });
 
