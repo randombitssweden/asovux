@@ -15,3 +15,13 @@ for (var i = 0; i < 10 ; i++) {
 }*/
 
 //while ()
+
+var antal = parseInt(prompt("Ange rader"));
+var t = document.getElementById("triangel");
+for (var rad = 0; rad < antal; rad++) {
+    t.innerHTML+="*";
+    for (var y = 0; y < rad ; y++) {
+        t.innerHTML+=("*");
+    }
+    t.innerHTML+="<br>"
+}
