@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html><head>
+    <title>Move Car In HTML5</title>
+    <!-- Written by Hirndra sisodiya  for the authorcode.com-->
+ 
+    <script type="text/javascript">
+        var myImage = new Image();
+        var back = new Image();
+        var ctx;
+        function displayImage() {
+            canvas = document.getElementById("myCanvas");
+            if (canvas.getContext) {
+                ctx = canvas.getContext("2d");
+                window.addEventListener('keydown', moveobj, true);
+ 
+                ctx.beginPath();
+                ctx.moveTo(25, 150);
+                ctx.lineTo(145, 150);
+                ctx.lineTo(145, 135);
+                ctx.lineTo(115, 130);
+                ctx.lineTo(115, 120);
+                ctx.lineTo(115, 120);
+                ctx.lineTo(50, 120);
+                ctx.lineTo(50, 130);
+                ctx.lineTo(50, 130);
+                ctx.lineTo(40, 130);
+                ctx.closePath();
+                ctx.fillStyle = "#FF0000";
+                ctx.fill();
+ 
+                ctx.beginPath();
+                ctx.arc(50, 150, 10, 360, true);
+                ctx.fillStyle = "#696969";
+                ctx.fill();
+ 
+                ctx.beginPath();
+                ctx.arc(110, 150, 10, 360, true);
+                ctx.fillStyle = "#696969";
+                ctx.fill();
+            }
+        }
+ 
+        var old = new Image();
+        var next = 0;
+        function moveobj(evt) {
+            ctx.fillStyle = "#ffffff";
+            ctx.rect(20, 5, 600, 300);
+            ctx.fill();
+            switch (evt.keyCode) {
+                case 37:
+                    ctx.restore();
+                    displayImage();
+                    break;
+                case 39:
+                    ctx.save();
+                    ctx.translate(5, 0);
+                    displayImage();
+                    break;
+            }
+        }
+        function clickhere() {
+            document.getElementById("span").innerHTML = "Use the right and left arrow keys";
+        }
+       </script>
+  </head>
+    <body onload="displayImage()">
+<input id="Button1" type="button" value="Start the car" align="center" onclick="clickhere();">
+<span id="span"></span><br>
+       <canvas id="myCanvas" width="600px" height="330px">
+    </canvas>
+ 
+</body></html>
