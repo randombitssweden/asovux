@@ -33,19 +33,38 @@ ctx.arc(x,y, 20, 0,2*Math.PI,false);
 ctx.fillStyle = bollTone; 
 ctx.fill();
 ctx.closePath();
-//ctx.stroke();
-ctx.beginPath();
-// brick.strokeRect(20,50,70,30);
 
-ctx.fillStyle = brick1Tone; // Gradient working
-ctx.strokeRect(20,50,70,30);
-ctx.fillRect(20,50,70,30); 
+var brick = ["brick","show"];
+brick[0] = function()
+{ 
+    ctx.beginPath();
+    ctx.fillStyle = brick1Tone; // Gradient working
+    ctx.strokeRect(5+i,j,80,30);
+    ctx.fillRect(5+i,j,80,30); 
+    ctx.closePath();
+}
+brick[1] = true;
+//ctx.stroke();
+/*
+var j = 20;
+//for ( var j = 20 ; j < 200 ; j+=40) {
+    for (var i = 0 ; i < pageDraw.width; i+=90) {
+        ctx.beginPath();
+        ctx.fillStyle = brick1Tone; // Gradient working
+        ctx.strokeRect(5+i,j,80,30);
+        ctx.fillRect(5+i,j,80,30); 
+        ctx.closePath();
+    }
+//}
+*/
+/*
+ctx.beginPath();
 ctx.strokeStyle = "blue"; // Not working. Inherit from .addColorStop ? 
 ctx.fill(); 
 ctx.closePath();
 ctx.beginPath();
-ctx.strokeRect(110,50,70, 30);
-ctx.fillRect(110,50,70, 30);
+ctx.strokeRect(110,50,80, 30);
+ctx.fillRect(110,50,80, 30);
 ctx.closePath();
 
-
+*/
