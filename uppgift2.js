@@ -21,7 +21,7 @@ bollTone.addColorStop(0,'rgb(255,204,204)');
 bollTone.addColorStop(.5,'rgb(204,0,0)');
 //bollTone.addColorStop(.8,'rgb(153,0,0)');
 bollTone.addColorStop(1,'rgb(153,0,0)');
-brick1Tone.addColorStop(0, 'rgb(0,0,255)');
+brick1Tone.addColorStop(0, 'rgb(0,0,255)'); 
 brick1Tone.addColorStop(.5, 'rgb(0,50,250)');
 brick1Tone.addColorStop(1, 'rgb(200,100,100)');
 brick2Tone.addColorStop(0, 'rgb(0,50,155)');
