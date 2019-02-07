@@ -33,11 +33,20 @@ ctx.fill();
 ctx.strokeStyle = "red";
 ctx.closePath();
 ctx.stroke();
-
+// cirkel
 ctx.beginPath();
 ctx.arc(350,250,30,0,2*Math.PI, true);
 ctx.strokeStyle = "green";
 ctx.fillStyle = "purple";
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
+
+// ellipse
+ctx.beginPath();
+ctx.ellipse(250,150,30,60,45,2*Math.PI, false);
+ctx.strokeStyle = "pink";
+ctx.fillStyle = "green";
 ctx.fill();
 ctx.stroke();
 ctx.closePath();
