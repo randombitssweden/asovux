@@ -43,7 +43,7 @@ brick[0] = function()
     ctx.fillRect(5+i,j,80,30); 
     ctx.closePath();
 }
-brick[1] = true;
+
 //ctx.stroke();
 /*
 var j = 20;
