@@ -8,7 +8,11 @@ ctx.lineWidth = 3;
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
 
+var farg = document.getElementsByClassName("color");
 
+for (var n = 0 ; n < 20 ; n++) {
+    farg[n].style.backgroundColor = "hsl("+n*18+",100%,50%";
+}
 
 function getMousePos(canvas, evt) {
     var rityta = canvas.getBoundingClientRect();
