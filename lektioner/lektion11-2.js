@@ -18,3 +18,15 @@ function getMousePos(canvas, evt) {
     };
 }
 
+function paint() {
+    var pos = getMousePos(canvas, event);
+    ctx.lineTo(pos.x, pos.y);
+    ctx.stroke();
+}
+canvas.addEventListener("mousedown", function(e) {
+    ctx.beginPath();
+    var pos = getMousePos(canvas, event);
+    ctx.moveTo(pos.x, pos.y;);
+    canvas.addEventListener("mousemove", paint);
+
+});
