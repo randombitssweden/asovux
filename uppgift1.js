@@ -73,6 +73,11 @@ for (i = 0; i < 5; i++) {
         console.log("NaN entered.")
         svar[i] = prompt("Du måste ange en siffra mellan 0-9.\nVad blir " +tal1[i] +"-" +tal2[i] +"?:");
     }
+    if (tal1[i] - tal2[i] == svar[i]) {
+        alert("Du svarade rätt!");
+    } else {
+        alert("Du svarade fel...")
+    }
 }
 // Skriv ut talen och svaren och räkna antalet rätt. 
 document.body.innerHTML+="Hej " +firstName;
