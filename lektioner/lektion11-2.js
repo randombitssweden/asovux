@@ -26,7 +26,11 @@ function paint() {
 canvas.addEventListener("mousedown", function(e) {
     ctx.beginPath();
     var pos = getMousePos(canvas, event);
-    ctx.moveTo(pos.x, pos.y;);
+    ctx.moveTo(pos.x, pos.y);
     canvas.addEventListener("mousemove", paint);
 
+});
+
+canvas.addEventListener("mouseup", function(){
+    canvas.removeEventListener("mousemove", paint);
 });
