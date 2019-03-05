@@ -10,7 +10,7 @@ while(1) {
     var daCash = prompt("Ange hur många kronor du vill omvandla till Euro:\n(0 för att avsluta)");
     if (daCash == "0") break;
     buffer = Math.floor(daCash/9.98 * 100) / 100;
-    alert(daCash +" kronor blir " +buffer +"€");
+    alert(daCash +" kronor blir " +buffer +"€"); // Inte klar. Måste snyggas till.
     counter++
 }
 document.innerHTML += ("Tack för besöket. Kontrollera dina resultat med forex. ;)")
