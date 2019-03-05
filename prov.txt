@@ -1,0 +1,30 @@
+Uppgift 1
+
+1 Euro har växelkursen 9,98 SEK. Du ska skapa en kod som öppnar ett prompt fönster där användaren kan ange hur många kronor den vill växla.
+
+Där efter öppnas ett alert fönster för att ange svaret. 
+
+*Tips dela med 9,98 för att få fram euro
+*! hantera decimaler och dylikt rätt. Svara gärna med 1 euro 54 cent.
+
+
+Uppgift 2
+Klicka på huvudstaden så får du se landet. 
+
+Stockholm
+Oslo 
+Helsingfors
+Köpenhamn
+Reykjavik
+
+
+*! Use onclick and document write
+
+
+Uppgift 3
+A: Skriv nu en js-fil som gör så att när du klickar någonstans i canvas så ritas på denna plats en fylld curkel där med slumpmässig storlek (radien kan anta vilket 
+värde som helst mellan 10-30) och färg (det skall finns 5 st olika färger att slumpa mellan varje klick)
+
+B: Förbättra koden så att curklarna rör sig inom canvas (studsar runt mot kanterna. när du klickar för att lägga till en cirkel så får den en slumpad riktning och 
+hastighet.)
+
